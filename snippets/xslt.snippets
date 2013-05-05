@@ -1,0 +1,74 @@
+# XSLT elements
+
+snippet cos
+	<xsl:copy-of select="${1}" />
+snippet vos
+	<xsl:value-of select="${1}" />
+snippet tm
+	<xsl:template match="${1}" />
+snippet ats
+	<xsl:apply-templates select="${1}" />
+snippet vn
+	<xsl:variable name="${1}" />
+snippet vns
+	<xsl:variable name="${1}" select="${2}" />
+snippet fn
+	<fn:function name="${1}">
+		<xsl:param name="${2}"/>
+		${3}
+	</fn:function>
+snippet if
+	<xsl:if test="${1}">
+		${2}
+	</xsl:if>
+snippet cw
+	<xsl:choose>
+		<xsl:when test="${1}">
+			${2}
+		</xsl:when>
+	</xsl:choose>
+snippet cwo
+	<xsl:choose>
+		<xsl:when test="${1}">
+			${2}
+		</xsl:when>
+		<xsl:otherwise>
+			${3}
+		</xsl:otherwise>
+	</xsl:choose>
+snippet fe
+	<xsl:for-each select="${1}">
+		${2}
+	</xsl:for-each>
+snippet pn
+	<xsl:param name="${1}" />
+snippet pns
+	<xsl:param name="${1}" select="${2}" />
+snippet wpn
+	<xsl:with-param name="${1}">
+		${2}
+	</xsl:with-param>
+snippet wpns
+	<xsl:with-param name="${1}" select="${2}" />
+snippet cp
+	<xsl:copy>
+		${1}
+	</xsl:copy>
+snippet tx
+	<xsl:text>
+		${1}
+	</xsl:text>
+snippet en
+	<xsl:element name="${1}">
+		${2}
+	</xsl:element>
+snippet kn
+	<xsl:key name="${1}" match="${2}" use="${3}" />
+snippet ctnp
+	<xsl:call-template name="${1}">
+		<xsl:with-param name="${2}" select="${3}" />
+	</xsl:call-template>
+snippet ctn
+	<xsl:call-template name="${1}">
+		${2}
+	</xsl:call-template>
