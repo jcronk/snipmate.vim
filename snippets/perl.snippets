@@ -71,8 +71,8 @@ snippet xfor
 	${1:expression} for @${2:array};${3}
 # Foreach Loop
 snippet for
-	foreach my $${1:x} (@${2:array}) {
-		${3:# body...}
+	for (@${1:array}) {
+		${2:# body...}
 	}
 # Foreach Loop One-line
 snippet fore
