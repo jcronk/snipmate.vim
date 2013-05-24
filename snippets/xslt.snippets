@@ -1,15 +1,17 @@
 # XSLT elements
 
 snippet cos
-	<xsl:copy-of select="${1}" />
+	<xsl:copy-of select="${1}" />${2}
 snippet vos
-	<xsl:value-of select="${1}" />
+	<xsl:value-of select="${1}" />${2}
 snippet tm
-	<xsl:template match="${1}" />
+	<xsl:template match="${1}" />${2}
 snippet ats
-	<xsl:apply-templates select="${1}" />
+	<xsl:apply-templates select="${1}" />${2}
 snippet vn
-	<xsl:variable name="${1}" />
+	<xsl:variable name="${1}">
+		${2}
+	</xsl:variable>
 snippet vns
 	<xsl:variable name="${1}" select="${2}" />
 snippet fn
@@ -36,6 +38,12 @@ snippet cwo
 			${3}
 		</xsl:otherwise>
 	</xsl:choose>
+snippet oth
+	<xsl:otherwise>${1}</xsl:otherwise>
+snippet wt
+	<xsl:when test="${1}">
+		${2}
+	</xsl:when>
 snippet fe
 	<xsl:for-each select="${1}">
 		${2}
