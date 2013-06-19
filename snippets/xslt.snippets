@@ -5,9 +5,16 @@ snippet cos
 snippet vos
 	<xsl:value-of select="${1}" />${2}
 snippet tm
-	<xsl:template match="${1}" />${2}
+	<xsl:template match="${1}">
+		${2}
+	</xsl:template>
 snippet ats
 	<xsl:apply-templates select="${1}" />${2}
+snippet atswp
+	<xsl:apply-templates select="${1}">
+		<xsl:with-param name="${2}" select="${3}" />
+		${4}
+	</xsl:apply-templates>
 snippet vn
 	<xsl:variable name="${1}">
 		${2}
@@ -84,4 +91,6 @@ snippet msg
 	<xsl:message>
 		${1}
 	</xsl:message>
+snippet rs
+	<fn:result select="${1}" />${2}
 
